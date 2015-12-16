@@ -1,5 +1,5 @@
 FROM drydock/u14:prod
 
-ADD . /tmp
+ADD . /u14gol
 
-RUN /tmp/install.sh && rm -rf /tmp
+RUN /u14gol/install.sh
