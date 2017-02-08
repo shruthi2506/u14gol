@@ -17,14 +17,13 @@ apt-get update && apt-get install -y \
 	mercurial \
 	cmake \
 	scons \
-	binutils
+	binutils \
+        gcc \
+        bzr
 
 # Install gvm
 echo "================= Install gvm ==================="
 curl -s -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer | bash
 
-#!/bin/bash
-for file in /u14gol/version/*;
-do
-  $file
-done
+export CGO_ENABLED=0
+/u16golall/go_install.sh
